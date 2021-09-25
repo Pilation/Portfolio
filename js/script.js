@@ -125,7 +125,7 @@ $(document).ready(function () {
                 breakpoint: 800,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
                     centerMode: true,
                     variableWidth: false,
                 }
