@@ -2748,7 +2748,7 @@ body {
   }
 }
 
-@media screen and (max-width: 375px) and (hover: hover) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (hover: none) {
   .header-menu__link:hover::before {
     left: 0;
     right: auto;
