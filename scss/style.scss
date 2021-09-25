@@ -1427,7 +1427,7 @@ body {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
     .wrapper {
-        width: 375px;
+        min-width: 375px;
         background-color: green;
     }
     .category {
@@ -1484,7 +1484,7 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        width: 375px;
+        min-width: 375px;
         margin: 0 auto;
         z-index: 50;
     }
