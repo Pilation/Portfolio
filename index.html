@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-slace=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diplom</title>
     <!-- Work Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -248,7 +248,7 @@
         </div>
         <!-- team -->
         <div class="center-category">
-            <div class="team__box">
+            <div class="team-box">
                 <span class="category__title center-category__title">team</span>
                 <h2 class="center-category__heading">Strong Members</h2>
                 <p class="center-category__description">
@@ -305,12 +305,14 @@
         <div class="category">
             <div class="testimonials-box">
                 <div class="folder-wide">
-                    <div class="folder-testimonials__red-box"></div>
-                    <div class="folder-testimonials__yellow-box"></div>
-                    <div class="folder-testimonials"></div>
-                    <div class="folder-testimonials__icon company-icon"></div>
+                    <div class="folder-testimonials__box">
+                        <div class="folder-testimonials__red-box"></div>
+                        <div class="folder-testimonials__yellow-box"></div>
+                        <div class="folder-testimonials"></div>
+                        <div class="folder-testimonials__icon company-icon"></div>
+                    </div>
                 </div>
-                <div class="category__card">
+                <div class="category__card category__card_testimonials">
                     <span class="category__title">testimonials</span>
                     <h2 class="category__heading">Reviews</h2>
                     <div class="category-quote">
@@ -318,17 +320,21 @@
                             <div class="category-quote__box">
                                 <div class="category-quote__card">
                                     <p class="category-quote__text">
-                                        The sky was cloudless and of a deep dark blue the spectacle before us was indeed
+                                        The sky was cloudless and of a deep dark blue the spectacle before us was
+                                        indeed
                                         sublime.
                                     </p>
-                                    <span class="category-quote__name">Jaroslav Brabec</span>
-                                    <span class="category-quote__job">Microsoft</span>
+                                    <div class="category-quote__name-title">
+                                        <span class="category-quote__name">Jaroslav Brabec</span>
+                                        <span class="category-quote__job">Microsoft</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="category-quote__box">
                                 <div class="category-quote__card">
                                     <p class="category-quote__text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique tempora dicta
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique tempora
+                                        dicta
                                         cupiditate iste.
                                     </p>
                                     <span class="category-quote__name">John Smidt</span>
@@ -394,7 +400,7 @@
         </div>
         <!-- latest articles -->
         <div class="center-category" id="blog">
-            <div class="latest-articles__box">
+            <div class="latest-articles-box">
                 <span class="category__title center-category__title">latest articles</span>
                 <h2 class="center-category__heading">Check our Insights</h2>
                 <p class="center-category__description">
