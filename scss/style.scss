@@ -2072,7 +2072,7 @@ body {
     }
 }
 
-@media screen and (max-width: 1440px) and (hover: hover) {
+@media screen and (min-device-width: 480px) and (max-width: 1440px) and (hover: hover) {
     .header-menu__link:hover::before {
         left: 0;
         right: auto;
@@ -2141,71 +2141,71 @@ body {
     }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (hover: none) {
-    .header-menu__link:hover::before {
-        left: 0;
-        right: auto;
-        width: 100%;
-    }
-    .go-top-button:hover {
-        cursor: pointer;
-        border: 5px solid #f07566;
-        background-color: transparent;
-    }
-    .go-top-button:hover::after {
-        cursor: pointer;
-        color: #f07566;
-    }
-    .category__button:hover {
-        transform: scale(1.1);
-    }
-    .category__button:hover::before {
-        opacity: 0;
-        transform: scale(0.5, 0.5);
-    }
-    .category__button:hover::after {
-        opacity: 1;
-        transform: scale(1, 1);
-    }
-    .empty-button:hover {
-        transform: scale(1.1);
-        color: #fff;
-        background-color: #f07566;
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-    }
-    .folder:hover {
-        transform: scale(1.05);
-    }
-    .header__logo:hover {
-        color: #f07566;
-        transform: scale(1.1);
-    }
-    .redline__button:hover {
-        border: 1px solid #000;
-        animation: shake 0.2s ease-in-out 0.2s infinite alternate;
-        cursor: pointer;
-    }
-    .redline__button:hover::before {
-        border: 1px solid #000;
-        visibility: visible;
-        opacity: 1;
-    }
-    .contact-us__button:hover {
-        transform: scale(1.1);
-        color: #f07566;
-        line-height: 46px;
-        background-color: #fff;
-        border: 1px solid #f07566;
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-    }
-    .footer__logo:hover {
-        color: #f07566;
-        transform: scale(1.1);
-    }
-    .footer__link:hover::after {
-        height: 100%;
-    }
-    .footer__button:hover {
-        animation: shake 0.1s ease-in-out 0.1s infinite alternate;
-    }
-}
+// @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (hover: none) {
+//     .header-menu__link:hover::before {
+//         left: 0;
+//         right: auto;
+//         width: 100%;
+//     }
+//     .go-top-button:hover {
+//         cursor: pointer;
+//         border: 5px solid #f07566;
+//         background-color: transparent;
+//     }
+//     .go-top-button:hover::after {
+//         cursor: pointer;
+//         color: #f07566;
+//     }
+//     .category__button:hover {
+//         transform: scale(1.1);
+//     }
+//     .category__button:hover::before {
+//         opacity: 0;
+//         transform: scale(0.5, 0.5);
+//     }
+//     .category__button:hover::after {
+//         opacity: 1;
+//         transform: scale(1, 1);
+//     }
+//     .empty-button:hover {
+//         transform: scale(1.1);
+//         color: #fff;
+//         background-color: #f07566;
+//         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+//     }
+//     .folder:hover {
+//         transform: scale(1.05);
+//     }
+//     .header__logo:hover {
+//         color: #f07566;
+//         transform: scale(1.1);
+//     }
+//     .redline__button:hover {
+//         border: 1px solid #000;
+//         animation: shake 0.2s ease-in-out 0.2s infinite alternate;
+//         cursor: pointer;
+//     }
+//     .redline__button:hover::before {
+//         border: 1px solid #000;
+//         visibility: visible;
+//         opacity: 1;
+//     }
+//     .contact-us__button:hover {
+//         transform: scale(1.1);
+//         color: #f07566;
+//         line-height: 46px;
+//         background-color: #fff;
+//         border: 1px solid #f07566;
+//         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+//     }
+//     .footer__logo:hover {
+//         color: #f07566;
+//         transform: scale(1.1);
+//     }
+//     .footer__link:hover::after {
+//         height: 100%;
+//     }
+//     .footer__button:hover {
+//         animation: shake 0.1s ease-in-out 0.1s infinite alternate;
+//     }
+// }
