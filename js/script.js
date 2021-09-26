@@ -57,8 +57,6 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    centerMode: false,
-                    variableWidth: true,
                 }
             }
 
@@ -126,8 +124,6 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    centerMode: true,
-                    variableWidth: false,
                 }
             }
 

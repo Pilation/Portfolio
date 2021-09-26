@@ -1425,10 +1425,9 @@ body {
     //     }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .wrapper {
-        min-width: 375px;
-        background-color: green;
+        width: 375px;
     }
     .category {
         width: 329px;
@@ -1484,9 +1483,10 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        min-width: 375px;
+        width: 100%;
         margin: 0 auto;
         z-index: 50;
+        -webkit-backface-visibility: hidden;
     }
     .header {
         position: relative;
@@ -1795,7 +1795,7 @@ body {
     }
     .team-member {
         margin-top: 79px;
-        width: auto;
+        width: 329px !important;
 
         &__card {
             width: 327px !important;
