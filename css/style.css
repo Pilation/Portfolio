@@ -1419,18 +1419,19 @@ body {
 }
 
 .category-quote__box {
-  margin: 0 30px;
   width: 496px;
   height: 290px;
-  padding: 19px 0 0 5px;
+  padding: 20px 0 0 5px;
 }
 
 .category-quote__card {
-  width: 470px;
+  position: relative;
+  left: 0;
+  width: 465px;
   height: 224px;
   background: #ffffff;
-  -webkit-box-shadow: 48px 16px 40px rgba(0, 17, 86, 0.0799083);
-          box-shadow: 48px 16px 40px rgba(0, 17, 86, 0.0799083);
+  -webkit-box-shadow: 10px 15px 15px rgba(1, 1, 1, 0.07);
+          box-shadow: 10px 15px 15px rgba(1, 1, 1, 0.07);
   border-radius: 8px;
   position: relative;
   padding: 27px 32px 25px 32px;
@@ -2730,7 +2731,7 @@ body {
   }
 }
 
-@media screen and (min-device-width: 480px) and (max-width: 1440px) and (hover: hover) {
+@media screen and (min-device-width: 480px) and (hover: hover) {
   .header-menu__link:hover::before {
     left: 0;
     right: auto;
@@ -2767,7 +2768,8 @@ body {
     -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
             box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
   }
-  .folder:hover {
+  .folder:hover,
+  .folder-wide:hover {
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
   }
