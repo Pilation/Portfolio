@@ -58,6 +58,7 @@ $(document).ready(function () {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     centerMode: true,
+                    slidePerRow: 1,
                 }
             }
 
@@ -126,6 +127,7 @@ $(document).ready(function () {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     centerMode: true,
+                    slidePerRow: 1,
                 }
             }
 

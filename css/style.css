@@ -127,6 +127,15 @@ h1, h2, h3, h4, h5, h6 {
 /* Слайд */
 .team-member .slick-slide {
   margin: 0 15px 64px 15px;
+  width: 370px;
+  background: #ffffff;
+  border: 1px solid #e6edf5;
+  border-radius: 8px;
+  padding: 16px 16px;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 /* Слайд по центру */
@@ -179,6 +188,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Стрелка не активная */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .team-member .slick-slide {
+    width: 327px;
+  }
+}
+
 @-webkit-keyframes shake {
   from {
     -webkit-transform: rotate(10deg);
@@ -191,6 +206,7 @@ h1, h2, h3, h4, h5, h6 {
             transform: rotate(-10deg);
   }
 }
+
 @keyframes shake {
   from {
     -webkit-transform: rotate(10deg);
@@ -1175,15 +1191,6 @@ body {
 
 .team-member__card {
   margin: 0 auto;
-  width: 370px !important;
-  background: #ffffff;
-  border: 1px solid #e6edf5;
-  border-radius: 8px;
-  padding: 16px 16px;
-  -webkit-transition: -webkit-box-shadow 1s;
-  transition: -webkit-box-shadow 1s;
-  transition: box-shadow 1s;
-  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .team-member__img {
@@ -2290,10 +2297,6 @@ body {
   }
   .team-member {
     margin-top: 79px;
-    width: 329px !important;
-  }
-  .team-member__card {
-    width: 327px !important;
   }
   .team-member__img {
     width: 290px;
