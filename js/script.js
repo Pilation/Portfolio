@@ -1,7 +1,10 @@
 $(document).ready(function () {
     $('.team-member').slick({
+        // accessibility: true;
         arrows: false,
         dots: true,
+        draggable: true,
+        respondTo: 'window',
         // адаптивная высота
         adaptiveHeight: true,
         slidesToShow: 3,
@@ -37,6 +40,10 @@ $(document).ready(function () {
         // appendArrows: $(".arws"),
         // переместить стрелки в див
         // appendDots: $(".arws"),
+        // swipe: true,
+        touchMove: true,
+        // переключение слайдов с клика
+        focusOnSelect: true,
         responsive: [
             {
                 breakpoint: 1400,
@@ -59,6 +66,7 @@ $(document).ready(function () {
                     slidesToScroll: 1,
                     centerMode: true,
                     slidePerRow: 1,
+
                 }
             }
 
