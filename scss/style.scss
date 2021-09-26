@@ -1,12 +1,7 @@
-@import "null.scss";
-@import "header.scss";
-@import "company.scss";
-@import "about.scss";
-@import "services.scss";
-@import "team.scss";
-@import "sliders.scss";
-@import "media.scss";
-
+@import "_null.scss";
+@import "_sliders.scss";
+@import "_slick-theme.scss";
+@import "_slick.scss";
 // @media screen and (max-width: 375px) {
 //     .company {
 //         flex: row;
@@ -20,9 +15,9 @@
 //     }
 // }
 // Шаблон
-%red-border {
-    // border: 1px solid red;
-}
+// %red-border {
+//     // border: 1px solid red;
+// }
 // @extend %red-border;
 @keyframes shake {
     from {
@@ -60,7 +55,6 @@ body {
     margin: 0 auto;
     // @extend %red-border;
     background-color: #f2f2f2;
-    background-color: red;
     z-index: -2;
 }
 .go-top-button {
@@ -1610,7 +1604,8 @@ body {
         justify-content: flex-start;
         align-items: flex-start;
         padding-right: 10px;
-        margin-top: 90px;
+        padding-top: 90px;
+        margin-top: 0;
     }
 
     .category__heading_company {
