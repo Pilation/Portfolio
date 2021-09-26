@@ -496,6 +496,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: flex-start;
 }
 .folder-about {
     position: relative;
@@ -1391,9 +1392,9 @@ body {
 
 // media
 @media screen and (max-width: 1024px) {
-    body.lock {
-        overflow: hidden;
-    }
+    // body.lock {
+    //     overflow: hidden;
+    // }
     .header__box {
         height: 50px;
     }
@@ -1472,9 +1473,9 @@ body {
     }
     // header
     // Burger Menu
-    body.lock {
-        overflow: auto;
-    }
+    // body.lock {
+    //     overflow: auto;
+    // }
     .header__box {
         height: 50px;
     }
@@ -1486,7 +1487,6 @@ body {
         width: 100%;
         margin: 0 auto;
         z-index: 50;
-        -webkit-backface-visibility: hidden;
     }
     .header {
         position: relative;
@@ -1522,7 +1522,7 @@ body {
         height: 48px;
         border-radius: 50%;
         background: #f07566;
-        z-index: 3;
+        z-index: 50;
         & span {
             position: absolute;
             background: #fff;
@@ -1590,6 +1590,7 @@ body {
         }
     }
     .header-menu.active {
+        z-index: 1;
         top: 0;
     }
 

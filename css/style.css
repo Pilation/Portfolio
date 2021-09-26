@@ -733,6 +733,9 @@ body {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .folder-about {
@@ -1823,9 +1826,6 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-  body.lock {
-    overflow: hidden;
-  }
   .header__box {
     height: 50px;
   }
@@ -1889,9 +1889,6 @@ body {
     bottom: 23px;
     right: 23px;
   }
-  body.lock {
-    overflow: auto;
-  }
   .header__box {
     height: 50px;
   }
@@ -1902,7 +1899,6 @@ body {
     width: 100%;
     margin: 0 auto;
     z-index: 50;
-    -webkit-backface-visibility: hidden;
   }
   .header {
     position: relative;
@@ -1948,7 +1944,7 @@ body {
     height: 48px;
     border-radius: 50%;
     background: #f07566;
-    z-index: 3;
+    z-index: 50;
   }
   .header__burger span {
     position: absolute;
@@ -2018,6 +2014,7 @@ body {
     color: #fff;
   }
   .header-menu.active {
+    z-index: 1;
     top: 0;
   }
   .header-menu__list {
