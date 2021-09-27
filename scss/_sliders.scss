@@ -105,6 +105,10 @@
 .category-quote__list .slick-arrow.slick-disabled {
 }
 
+.category-quote__list .slick-slide {
+    margin: 0 30px;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .team-member .slick-slide {
         width: 327px;

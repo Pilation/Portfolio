@@ -188,6 +188,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Стрелка не активная */
+.category-quote__list .slick-slide {
+  margin: 0 30px;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .team-member .slick-slide {
     width: 327px;
