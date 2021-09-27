@@ -752,6 +752,12 @@ body {
   height: 480px;
   background: #fbd34b;
   border-radius: 100px 8px 8px 8px;
+  overflow: hidden;
+}
+
+.folder-company img {
+  position: relative;
+  left: -25px;
 }
 
 .folder-company__red-box {
@@ -878,6 +884,12 @@ body {
   height: 448px;
   background: #d8d8d8;
   border-radius: 8px 100px 8px 8px;
+  overflow: hidden;
+}
+
+.folder-about img {
+  position: relative;
+  left: -270px;
 }
 
 .folder-about__yellow-box {
@@ -920,7 +932,7 @@ body {
   -webkit-box-shadow: 0px 24px 48px rgba(86, 66, 0, 0.0799083);
           box-shadow: 0px 24px 48px rgba(86, 66, 0, 0.0799083);
   border-radius: 8px;
-  background-image: url(../img/Red-circle.svg), url(../img/galochka.svg);
+  background-image: url(../img/Red-circle.svg), url(../img/Red-checkmark.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1091,6 +1103,7 @@ body {
   background: #d8d8d8;
   border-radius: 8px;
   position: relative;
+  overflow: hidden;
 }
 
 .portfolio__pn {
@@ -1316,6 +1329,12 @@ body {
   border-radius: 8px 8px 50px 8px;
   background-position: top;
   margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.team-member__img img {
+  position: relative;
+  left: -70px;
 }
 
 .team-member__img_1 {
@@ -1381,6 +1400,12 @@ body {
   height: 448px;
   background: #d8d8d8;
   border-radius: 8px 100px 8px 8px;
+  overflow: hidden;
+}
+
+.folder-testimonials img {
+  position: relative;
+  right: 50px;
 }
 
 .folder-testimonials__red-box {
@@ -1677,6 +1702,7 @@ body {
   height: 240px;
   background: #d8d8d8;
   border-radius: 8px 8px 50px 8px;
+  overflow: hidden;
 }
 
 .latest-articles__title {
@@ -1718,6 +1744,7 @@ body {
   width: 554px;
   background: #d8d8d8;
   border-radius: 8px 8px 50px 8px;
+  overflow: hidden;
 }
 
 .main-article__text {
