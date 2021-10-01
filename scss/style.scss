@@ -1,24 +1,6 @@
 @import "_null.scss";
 @import "_sliders.scss";
-@import "_slick-theme.scss";
 @import "_slick.scss";
-// @media screen and (max-width: 375px) {
-//     .company {
-//         flex: row;
-//         flex-wrap: wrap;
-//     }
-//     .category__card_company {
-//         transform: scale(0.7);
-//     }
-//     .folder-company {
-//         transform: scale(0.7);
-//     }
-// }
-// Шаблон
-// %red-border {
-//     // border: 1px solid red;
-// }
-// @extend %red-border;
 @keyframes shake {
     from {
         transform: rotate(10deg);
@@ -51,7 +33,7 @@ body {
 }
 .wrapper {
     position: relative;
-    max-width: 1440px;
+    // max-width: 1440px;
     margin: 0 auto;
     // @extend %red-border;
     background-color: #f2f2f2;
@@ -280,21 +262,30 @@ body {
 .folder-wide {
     position: relative;
     transition: all 1s;
+    & img {
+        height: 100%;
+    }
+}
+.portfolio__picture img {
+    height: 100%;
+    width: 100%;
 }
 
-// img.folder-image {
-//     overflow: hidden;
-// }
-
-// header
-// Burger Menu
-.header_adaptive {
-    // position: fixed;
-    // @extend %red-border;
-    max-width: 1440px;
-    margin: 0 auto;
-    z-index: 50;
+.brand-list__item img {
+    width: 100%;
 }
+
+.main-article__img img,
+.latest-articles__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.team-member__card img {
+    height: 100%;
+}
+
+// Header & Burger Menu
 .header {
     position: relative;
     width: 100%;
@@ -312,7 +303,7 @@ body {
     }
     &__box {
         padding: 16px 0;
-        max-width: 1170px;
+        width: 1170px;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
@@ -332,7 +323,11 @@ body {
     &__button {
         margin-left: auto;
     }
+    &__burger {
+        display: none;
+    }
 }
+
 .header-menu {
     margin: 0 0 0 42px;
     &__list {
@@ -365,26 +360,6 @@ body {
         }
     }
 }
-
-// изменить
-.header__burger {
-    display: none;
-}
-// .header__list {
-//     display: flex;
-//     position: relative;
-//     z-index: 2;
-// }
-// .header__list li {
-//     list-style: none;
-//     margin: 0px 0px 0px 20px;
-// }
-// .header__link {
-//     color: #fff;
-//     text-transform: uppercase;
-//     font-size: 18px;
-//     text-decoration: none;
-// }
 
 // company
 .company-box {
@@ -745,6 +720,11 @@ body {
     }
 
     &__img {
+    }
+    &__link {
+        display: block;
+        width: fit-content;
+        transition: all 0.5s;
     }
 }
 // redline
@@ -1415,12 +1395,6 @@ body {
 
 // media
 @media screen and (max-width: 1024px) {
-    // body.lock {
-    //     overflow: hidden;
-    // }
-    .header__box {
-        height: 50px;
-    }
     .header .empty-button {
         display: none;
     }
@@ -1437,21 +1411,11 @@ body {
         position: relative;
         z-index: 50;
     }
-
-    //     .header__list li {
-    //         margin: 0px 0px 20px 0px;
-    //     }
-    //     .header__link {
-    //         font-size: 24px;
-    //     }
-    //     .content {
-    //         padding: 70px 0px 0px 0px;
-    //     }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .wrapper {
-        width: 375px;
+        // width: 375px;
     }
     .category {
         width: 329px;
@@ -1494,23 +1458,7 @@ body {
         bottom: 23px;
         right: 23px;
     }
-    // header
-    // Burger Menu
-    // body.lock {
-    //     overflow: auto;
-    // }
-    .header__box {
-        height: 50px;
-    }
 
-    .header_adaptive {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        margin: 0 auto;
-        z-index: 50;
-    }
     .header {
         position: relative;
         width: 100%;
@@ -1523,67 +1471,88 @@ body {
             z-index: -1;
         }
         &__box {
-            padding-top: 16px;
-            padding-bottom: 16px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            height: 65px;
             width: 329px;
-            margin: 0 auto;
+            // padding-top: 16px;
+            // padding-bottom: 16px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            z-index: 50;
+            &::before {
+                content: "";
+                position: fixed;
+                left: 0;
+                top: 0;
+                height: 65px;
+                width: 100%;
+                background-color: #fbd34b;
+                // background-color: #41956d;
+                opacity: 0.75;
+            }
+        }
+        &__logo {
+            position: relative;
+            z-index: 50;
+        }
+        &__burger {
+            display: block;
+            margin-left: auto;
+            position: relative;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #f07566;
+            z-index: 50;
+            & span {
+                position: absolute;
+                background: #fff;
+                border-radius: 2px;
+                left: 13px;
+                top: 23px;
+                width: 22px;
+                height: 2px;
+                transition: all 0.3s ease 0s;
+            }
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                background: #fff;
+                border-radius: 2px;
+                left: 13px;
+                width: 22px;
+                height: 2px;
+                transition: all 0.3s ease 0s;
+            }
+            &:before {
+                top: 15px;
+            }
+            &:after {
+                bottom: 15px;
+            }
+            &.active span {
+                transform: scale(0);
+            }
+            &.active:before {
+                transform: rotate(45deg);
+                top: 23px;
+            }
+            &.active:after {
+                transform: rotate(-45deg);
+                bottom: 23px;
+            }
         }
     }
     .header .empty-button {
         display: none;
-    }
-
-    .header__burger {
-        display: block;
-        margin-left: auto;
-        position: relative;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background: #f07566;
-        z-index: 50;
-        & span {
-            position: absolute;
-            background: #fff;
-            border-radius: 2px;
-            left: 13px;
-            top: 23px;
-            width: 22px;
-            height: 2px;
-            transition: all 0.3s ease 0s;
-        }
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            background: #fff;
-            border-radius: 2px;
-            left: 13px;
-            width: 22px;
-            height: 2px;
-            transition: all 0.3s ease 0s;
-        }
-        &:before {
-            top: 15px;
-        }
-        &:after {
-            bottom: 15px;
-        }
-        &.active span {
-            transform: scale(0);
-        }
-        &.active:before {
-            transform: rotate(45deg);
-            top: 23px;
-        }
-        &.active:after {
-            transform: rotate(-45deg);
-            bottom: 23px;
-        }
     }
 
     .header-menu {
@@ -1595,6 +1564,7 @@ body {
         overflow: auto;
         transition: all 0.3s ease 0s;
         background-color: #d8d8d8;
+        background-color: #fbd34b;
         border-radius: 0 0 16px 16px;
         margin: 0 0;
         padding: 70px 23px 0 23px;
@@ -1619,11 +1589,6 @@ body {
 
     .header-menu__list {
         display: block;
-    }
-
-    .header__logo {
-        position: relative;
-        z-index: 50;
     }
 
     // company
@@ -1755,6 +1720,7 @@ body {
             align-items: center;
         }
         &__item {
+            padding-bottom: 50px;
             flex: 0 0 160px;
             display: flex;
             flex-direction: row;
@@ -2155,6 +2121,9 @@ body {
         border: 1px solid #f07566;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     }
+    .brand-list__link:hover {
+        transform: scale(1.1);
+    }
     .footer__logo:hover {
         color: #f07566;
         transform: scale(1.1);
@@ -2166,72 +2135,3 @@ body {
         animation: shake 0.1s ease-in-out 0.1s infinite alternate;
     }
 }
-
-// @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (hover: none) {
-//     .header-menu__link:hover::before {
-//         left: 0;
-//         right: auto;
-//         width: 100%;
-//     }
-//     .go-top-button:hover {
-//         cursor: pointer;
-//         border: 5px solid #f07566;
-//         background-color: transparent;
-//     }
-//     .go-top-button:hover::after {
-//         cursor: pointer;
-//         color: #f07566;
-//     }
-//     .category__button:hover {
-//         transform: scale(1.1);
-//     }
-//     .category__button:hover::before {
-//         opacity: 0;
-//         transform: scale(0.5, 0.5);
-//     }
-//     .category__button:hover::after {
-//         opacity: 1;
-//         transform: scale(1, 1);
-//     }
-//     .empty-button:hover {
-//         transform: scale(1.1);
-//         color: #fff;
-//         background-color: #f07566;
-//         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-//     }
-//     .folder:hover {
-//         transform: scale(1.05);
-//     }
-//     .header__logo:hover {
-//         color: #f07566;
-//         transform: scale(1.1);
-//     }
-//     .redline__button:hover {
-//         border: 1px solid #000;
-//         animation: shake 0.2s ease-in-out 0.2s infinite alternate;
-//         cursor: pointer;
-//     }
-//     .redline__button:hover::before {
-//         border: 1px solid #000;
-//         visibility: visible;
-//         opacity: 1;
-//     }
-//     .contact-us__button:hover {
-//         transform: scale(1.1);
-//         color: #f07566;
-//         line-height: 46px;
-//         background-color: #fff;
-//         border: 1px solid #f07566;
-//         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-//     }
-//     .footer__logo:hover {
-//         color: #f07566;
-//         transform: scale(1.1);
-//     }
-//     .footer__link:hover::after {
-//         height: 100%;
-//     }
-//     .footer__button:hover {
-//         animation: shake 0.1s ease-in-out 0.1s infinite alternate;
-//     }
-// }
